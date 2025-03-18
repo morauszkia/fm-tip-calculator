@@ -1,7 +1,7 @@
-<script setup></script>
+<script setup>
+import Container from "./components/Container.vue";
+</script>
 
-<template>
-  <h1>Hello World!</h1>
-</template>
+<template><Container /></template>
 
 <style scoped></style>
