@@ -1,12 +1,17 @@
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 const tipOptions = ["5", "10", "15", "25", "50"];
 const selectedOption = ref("5");
-const customTip = ref("Custom");
+const customTip = ref("");
+const tipPcent = computed(() => {
+  if (tipOptions.includes(selectedOption.value)) return selectedOption.value;
+  return customTip;
+});
 </script>
 
 <template>
   <p>Selected: {{ selectedOption }}</p>
+  <p>Tip value: {{ tipPcent }}</p>
   <fieldset>
     <template v-for="value in tipOptions" :key="value">
       <input
@@ -19,23 +24,15 @@ const customTip = ref("Custom");
       <label :for="value">{{ value + "%" }}</label>
     </template>
     <input
-      type="radio"
-      name="tip"
-      value="custom"
-      id="custom"
-      v-model="selectedOption"
+      type="text"
+      @click="
+        () => {
+          selectedOption = 'custom';
+        }
+      "
+      placeholder="Custom"
+      v-model="customTip"
     />
-    <label for="custom">
-      <input
-        type="text"
-        @click="
-          () => {
-            selectedOption = 'custom';
-          }
-        "
-        :value="customTip"
-      />
-    </label>
   </fieldset>
 </template>
 
