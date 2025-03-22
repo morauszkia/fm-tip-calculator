@@ -10,12 +10,14 @@ const { id, inputLabel, name, icon } = defineProps([
 </script>
 
 <template>
-  <div>
-    <label :for="id">{{ inputLabel }}</label>
-    <p>Can't be zero</p>
-  </div>
-  <img :src="getImageUrl(icon)" aria-hidden="true" />
-  <input type="number" :id="id" :name="name" />
+  <fieldset>
+    <div>
+      <label :for="id">{{ inputLabel }}</label>
+      <p>Can't be zero</p>
+    </div>
+    <img :src="getImageUrl(icon)" aria-hidden="true" />
+    <input type="number" :id="id" :name="name" />
+  </fieldset>
 </template>
 
 <style scoped></style>
