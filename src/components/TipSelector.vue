@@ -12,8 +12,6 @@ watch(tipPcent, () => (store.tip = tipPcent));
 </script>
 
 <template>
-  <p>Selected: {{ selectedOption }}</p>
-  <p>Tip value: {{ tipPcent }}</p>
   <fieldset>
     <template v-for="value in tipOptions" :key="value">
       <input

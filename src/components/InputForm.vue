@@ -5,11 +5,6 @@ import { store } from "../store/store";
 </script>
 
 <template>
-  <p>Bill: {{ store.bill }}</p>
-  <p>People: {{ store.people }}</p>
-  <p>Tip: {{ store.tip }}</p>
-  <p>Tip / Person: {{ store.tipPerPerson }}</p>
-  <p>Total / Person: {{ store.totalPerPerson }}</p>
   <FormInput
     id="bill"
     input-label="Bill"
