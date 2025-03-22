@@ -9,4 +9,9 @@ export const store = reactive({
   totalPerPerson: computed(() =>
     ((store.bill + store.totalTip) / store.people).toFixed(2)
   ),
+  reset: () => {
+    store.bill = undefined;
+    store.people = undefined;
+    store.tip = undefined;
+  },
 });
