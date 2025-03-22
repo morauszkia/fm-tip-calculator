@@ -1,12 +1,14 @@
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
+import { store } from "../store/store";
 const tipOptions = ["5", "10", "15", "25", "50"];
-const selectedOption = ref("5");
+const selectedOption = ref("");
 const customTip = ref("");
 const tipPcent = computed(() => {
   if (tipOptions.includes(selectedOption.value)) return selectedOption.value;
   return customTip;
 });
+watch(tipPcent, () => (store.tip = tipPcent));
 </script>
 
 <template>
