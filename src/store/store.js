@@ -5,10 +5,8 @@ export const store = reactive({
   people: undefined,
   tip: undefined,
   totalTip: computed(() => store.bill * (store.tip / 100)),
-  tipPerPerson: computed(() => (store.totalTip / store.people).toFixed(2)),
-  totalPerPerson: computed(() =>
-    ((store.bill + store.totalTip) / store.people).toFixed(2)
-  ),
+  tipPerPerson: computed(() => store.totalTip / store.people),
+  totalPerPerson: computed(() => (store.bill + store.totalTip) / store.people),
   reset: () => {
     store.bill = undefined;
     store.people = undefined;
