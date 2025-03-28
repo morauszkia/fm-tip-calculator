@@ -1,5 +1,4 @@
 <script setup>
-import { defineModel } from "vue";
 import { getImageUrl } from "../util/util";
 
 const { id, inputLabel, name, icon } = defineProps([
