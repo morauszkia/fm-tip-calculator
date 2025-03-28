@@ -5,7 +5,6 @@ import OutputDisplay from "./OutputDisplay.vue";
 
 <template>
   <InputForm />
-  <OutputDisplay />
 </template>
 
 <style scoped></style>
