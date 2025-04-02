@@ -1,3 +1,12 @@
+:root {
+  --primary: hsl(172, 67%, 45%);
+  --dark: hsl(183, 100%, 15%);
+  --font: hsl(186, 14%, 43%);
+  --bg: hsl(185, 41%, 84%);
+  --light: hsl(189, 41%, 97%);
+  --input-font-size: 1.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
