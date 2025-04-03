@@ -7,5 +7,3 @@ import Container from "./components/Container.vue";
   <Logo />
   <Container />
 </template>
-
-<style scoped></style>

@@ -5,6 +5,9 @@
   --bg: hsl(185, 41%, 84%);
   --light: hsl(189, 41%, 97%);
   --input-font-size: 1.5rem;
+  --radius-sm: 5px;
+  --radius-md: calc(3 * var(--radius-sm));
+  --radius-lg: calc(5 * var(--radius-sm));
 }
 
 * {
@@ -13,7 +16,24 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  margin-top: 3.125rem;
+}
+
 .attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0.5em;
   font-size: 11px;
   text-align: center;
 }
