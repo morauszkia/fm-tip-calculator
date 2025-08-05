@@ -22,19 +22,14 @@ import OutputDisplay from "./OutputDisplay.vue";
       icon="icon-person.svg"
       v-model="store.people"
     />
-    <OutputDisplay />
   </form>
 </template>
 
 <style scoped>
 .form {
-  background-color: #fff;
-  width: 100%;
-  padding: 2rem;
-  border-top-left-radius: var(--radius-lg);
-  border-top-right-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 0.5rem;
 }
 </style>
