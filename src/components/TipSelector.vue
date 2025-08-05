@@ -6,7 +6,7 @@ const selectedOption = ref("");
 const customTip = ref("");
 const tipPcent = computed(() => {
   if (tipOptions.includes(selectedOption.value)) return selectedOption.value;
-  return customTip;
+  return customTip.value;
 });
 watch(tipPcent, () => (store.tip = tipPcent));
 </script>
