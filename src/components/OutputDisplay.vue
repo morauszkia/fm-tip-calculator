@@ -23,4 +23,10 @@ import ResetButton from "./ResetButton.vue";
   flex-direction: column;
   gap: 2rem;
 }
+
+.output-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
 </style>

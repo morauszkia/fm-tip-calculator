@@ -5,6 +5,8 @@
   --dark: hsl(183, 100%, 15%);
   --font: hsl(186, 14%, 43%);
   --bg: hsl(185, 41%, 84%);
+  --btn-hover: hsl(173, 61%, 77%);
+  --btn-active: hsl(183, 79%, 24%);
   --error: #e17457;
   --light: hsl(189, 41%, 97%);
   --input-font-size: 1.5rem;
