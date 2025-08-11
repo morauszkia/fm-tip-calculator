@@ -1,26 +1,35 @@
 <script setup>
-import { defineProps, defineEmits } from "vue";
+// import { defineProps, defineEmits } from "vue";
+import { store } from "../store/store";
 
-const { value, modelValue } = defineProps({
+const { value } = defineProps({
   value: String,
-  modelValue: String,
 });
 
-const emit = defineEmits(["update:modelValue"]);
-
-function updateValue() {
-  emit("update:modelValue", value);
+function selectTip() {
+  store.tip = value;
+  store.customTip = false;
 }
 </script>
 
 <template>
-  <input
-    type="radio"
-    name="tip"
-    :id="value"
-    :value="value"
-    :checked="modelValue === value"
-    @change="updateValue"
-  />
-  <label :for="value">{{ value + "%" }}</label>
+  <button
+    type="button"
+    :class="store.tip === value ? 'selected' : ''"
+    @click="selectTip"
+  >
+    {{ value }}%
+  </button>
 </template>
+
+<style scoped>
+button {
+  font: inherit;
+  cursor: pointer;
+  background-color: var(--dark);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.25em 0.75em;
+}
+</style>
