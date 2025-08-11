@@ -4,6 +4,7 @@ export const store = reactive({
   bill: undefined,
   people: undefined,
   tip: undefined,
+  customTip: false,
   formIsFilled: computed(() => store.bill || store.people || store.tip),
   totalTip: computed(() => store.bill * (store.tip / 100)),
   tipPerPerson: computed(() => store.totalTip / store.people),
@@ -12,5 +13,6 @@ export const store = reactive({
     store.bill = undefined;
     store.people = undefined;
     store.tip = undefined;
+    store.customTip = false;
   },
 });
