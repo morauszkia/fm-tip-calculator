@@ -3,7 +3,7 @@ import { reactive, computed } from "vue";
 export const store = reactive({
   bill: undefined,
   people: undefined,
-  tip: undefined,
+  tip: "10",
   customTip: false,
   formIsFilled: computed(() => store.bill || store.people || store.tip),
   totalTip: computed(() => store.bill * (store.tip / 100)),
@@ -12,7 +12,7 @@ export const store = reactive({
   reset: () => {
     store.bill = undefined;
     store.people = undefined;
-    store.tip = undefined;
+    store.tip = "10";
     store.customTip = false;
   },
 });
