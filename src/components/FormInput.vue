@@ -9,7 +9,7 @@ const { id, inputLabel, name, icon, error } = defineProps([
   "error",
 ]);
 
-const emits = defineEmits(["blur"]);
+const emits = defineEmits(["input"]);
 
 const value = defineModel();
 </script>
@@ -29,7 +29,7 @@ const value = defineModel();
         v-model="value"
         placeholder="0"
         :class="error ? 'error' : ''"
-        @blur="$emit('blur')"
+        @input="$emit('input')"
       />
     </div>
   </fieldset>

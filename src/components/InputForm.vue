@@ -3,6 +3,7 @@ import { ref } from "vue";
 import FormInput from "./FormInput.vue";
 import TipSelector from "./TipSelector.vue";
 import { store } from "../store/store";
+import vueDebounce from "vue-debounce";
 
 let errors = {
   bill: ref(null),
@@ -11,8 +12,11 @@ let errors = {
 
 const validateInput = (id) => {
   if (store[id] === 0) errors[id].value = "Can't be zero";
+  else if (!store[id]) errors[id].value = "Can't be empty";
   else errors[id].value = null;
 };
+
+const vDebounce = vueDebounce();
 </script>
 
 <template>
@@ -24,7 +28,8 @@ const validateInput = (id) => {
       icon="icon-dollar.svg"
       v-model="store.bill"
       :error="errors.bill.value"
-      @blur="(e) => validateInput('bill')"
+      v-debounce:300ms="() => validateInput('bill')"
+      :debounce-events="'input'"
     />
     <TipSelector />
     <FormInput
@@ -34,7 +39,8 @@ const validateInput = (id) => {
       icon="icon-person.svg"
       v-model="store.people"
       :error="errors.people.value"
-      @blur="(e) => validateInput('people')"
+      v-debounce:600ms="() => validateInput('people')"
+      :debounce-events="'input'"
     />
   </form>
 </template>
