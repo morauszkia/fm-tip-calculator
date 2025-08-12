@@ -12,8 +12,6 @@ import OutputDisplay from "./OutputDisplay.vue";
 
 <style scoped>
 .container {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: #fff;
   padding: 2rem 1.5rem;
@@ -22,5 +20,20 @@ import OutputDisplay from "./OutputDisplay.vue";
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+@media screen and (min-width: 44rem) {
+  .container {
+    max-width: 90%;
+    border-radius: var(--radius-lg);
+  }
+}
+
+@media screen and (min-width: 58rem) {
+  .container {
+    max-width: min(90%, 57.5rem);
+    flex-direction: row;
+    gap: 3rem;
+  }
 }
 </style>

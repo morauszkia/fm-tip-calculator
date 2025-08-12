@@ -35,7 +35,7 @@ watch(
 input {
   font: inherit;
   text-align: right;
-  padding: 0.25em 0.75em;
+  padding: 0.25em 0.6em;
   border-radius: var(--radius-sm);
   border: none;
   background-color: var(--light);

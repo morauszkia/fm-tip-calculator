@@ -7,3 +7,9 @@ import Container from "./components/Container.vue";
   <Logo />
   <Container />
 </template>
+
+<style scoped>
+svg {
+  margin-top: 3.125rem;
+}
+</style>

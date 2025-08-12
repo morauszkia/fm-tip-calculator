@@ -51,5 +51,12 @@ const vDebounce = vueDebounce();
   flex-direction: column;
   gap: 2rem;
   padding: 0.5rem;
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 58rem) {
+  .form {
+    gap: 2.5rem;
+  }
 }
 </style>

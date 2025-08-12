@@ -34,14 +34,16 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-weight: var(--font-weight);
+  position: relative;
 }
 
 main {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 2.5rem;
   align-items: center;
-  margin-top: 3.125rem;
 }
 
 .attribution {
@@ -55,4 +57,16 @@ main {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 44rem) {
+  main {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 58rem) {
+  main {
+    gap: 5.5rem;
+  }
 }

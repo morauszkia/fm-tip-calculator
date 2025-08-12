@@ -39,4 +39,10 @@ const displayAmount = computed(() =>
   color: var(--primary);
   font-size: 2rem;
 }
+
+@media screen and (min-width: 58rem) {
+  .output-amount {
+    font-size: 3rem;
+  }
+}
 </style>

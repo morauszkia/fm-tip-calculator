@@ -29,4 +29,16 @@ import ResetButton from "./ResetButton.vue";
   flex-direction: column;
   gap: 1.25rem;
 }
+
+@media screen and (min-width: 58rem) {
+  .output {
+    padding: 2.5rem;
+    flex-basis: 105%;
+    justify-content: space-between;
+  }
+
+  .output-list {
+    gap: 1.6rem;
+  }
+}
 </style>
