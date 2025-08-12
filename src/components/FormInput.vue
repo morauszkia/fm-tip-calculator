@@ -1,12 +1,15 @@
 <script setup>
 import { getImageUrl } from "../util/util";
 
-const { id, inputLabel, name, icon } = defineProps([
+const { id, inputLabel, name, icon, error } = defineProps([
   "id",
   "input-label",
   "name",
   "icon",
+  "error",
 ]);
+
+const emits = defineEmits(["blur"]);
 
 const value = defineModel();
 </script>
@@ -15,7 +18,7 @@ const value = defineModel();
   <fieldset>
     <div class="label-container">
       <label :for="id">{{ inputLabel }}</label>
-      <p class="error-message show">Can't be zero</p>
+      <p v-if="error" class="error-message">{{ error }}</p>
     </div>
     <div class="input">
       <img :src="getImageUrl(icon)" aria-hidden="true" />
@@ -25,6 +28,8 @@ const value = defineModel();
         :name="name"
         v-model="value"
         placeholder="0"
+        :class="error ? 'error' : ''"
+        @blur="$emit('blur')"
       />
     </div>
   </fieldset>
@@ -49,12 +54,7 @@ label {
 }
 
 .error-message {
-  display: none;
   color: var(--error);
-}
-
-.error-message.show {
-  display: inline;
 }
 
 .input {
