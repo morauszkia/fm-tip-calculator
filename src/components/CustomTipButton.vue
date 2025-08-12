@@ -36,5 +36,19 @@ input {
   font: inherit;
   text-align: right;
   padding: 0.25em 0.75em;
+  border-radius: var(--radius-sm);
+  border: none;
+  background-color: var(--light);
+  color: var(--font);
+}
+
+input::placeholder {
+  color: var(--font);
+}
+
+input.selected,
+input:focus {
+  outline: 2px solid var(--primary);
+  color: var(--dark);
 }
 </style>

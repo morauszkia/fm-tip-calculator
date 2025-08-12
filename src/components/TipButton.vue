@@ -31,5 +31,16 @@ button {
   border: none;
   border-radius: var(--radius-sm);
   padding: 0.25em 0.75em;
+  transition: all 0.3s ease-in;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+  color: var(--dark);
+}
+
+button.selected {
+  background-color: var(--primary);
+  color: var(--dark);
 }
 </style>

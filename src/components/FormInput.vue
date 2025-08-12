@@ -82,11 +82,11 @@ input {
 }
 
 input:focus {
-  outline: 1px solid var(--primary);
+  outline: 2px solid var(--primary);
 }
 
 input.error {
-  outline: 1px solid var(--error);
+  outline: 2px solid var(--error);
 }
 
 /* Chrome, Safari, Edge, Opera */
