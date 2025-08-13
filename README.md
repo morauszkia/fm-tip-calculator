@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![Screenshot of desktop version](./screenshot.png)
 
 ### Links
 

@@ -3,7 +3,7 @@ import { getImageUrl } from "../util/util";
 
 const { id, inputLabel, name, icon, error } = defineProps([
   "id",
-  "input-label",
+  "inputLabel",
   "name",
   "icon",
   "error",

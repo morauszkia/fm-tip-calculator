@@ -3,7 +3,7 @@ import { store } from "../store/store";
 </script>
 
 <template>
-  <button type="reset" @click="store.reset" :disabled="!store.formIsFilled">
+  <button type="reset" @click="store.reset" :disabled="!store.formIsTouched">
     Reset
   </button>
 </template>
@@ -33,5 +33,6 @@ button:active {
 
 button:disabled {
   background-color: var(--btn-active);
+  cursor: not-allowed;
 }
 </style>

@@ -2,19 +2,19 @@
 import { store } from "../store/store";
 import { ref, watch } from "vue";
 
+let customTipValue = ref("");
+
 const setCustomTip = (event) => {
-  customTipValue = event.target.value;
-  store.tip = customTipValue;
+  customTipValue.value = event.target.value;
+  store.tip = customTipValue.value;
   store.customTip = true;
 };
-
-let customTipValue = ref("");
 
 watch(
   () => store.tip,
   () => {
     if (store.tip === undefined) {
-      customTipValue = "";
+      customTipValue.value = "";
     }
   }
 );

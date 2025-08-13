@@ -7,7 +7,7 @@ const tipOptions = ["5", "10", "15", "25", "50"];
 
 <template>
   <fieldset>
-    <p>Select Tip &percnt;</p>
+    <legend>Select Tip &percnt;</legend>
     <div class="grid">
       <TipButton v-for="value in tipOptions" :key="value" :value="value" />
       <CustomTipButton />
@@ -20,7 +20,7 @@ fieldset {
   border: none;
 }
 
-p {
+legend {
   color: var(--font);
   margin-bottom: 1em;
 }
